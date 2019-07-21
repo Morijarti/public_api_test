@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+# pylint: disable=unused-import
 import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "conduit.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "opt_out.public_api.website.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

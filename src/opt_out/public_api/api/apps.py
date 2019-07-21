@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ApiConfig(AppConfig):
-    name = "public_api.api"
+    name = "opt_out.public_api.api"
