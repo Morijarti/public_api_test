@@ -17,6 +17,9 @@ Development
 Run `poetry install`
 and after that `pre-commit install`
 
+You can test your commit checks by running
+`pre-commit run`
+
 Note
 ====
 

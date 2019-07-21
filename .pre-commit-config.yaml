@@ -1,22 +1,29 @@
 repos:
-  - repo: https://github.com/ambv/black
-    rev: stable
+  - repo: local
     hooks:
       - id: black
+        name: black
+        entry: black
         language_version: python3.7
-
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.7.7
-    hooks:
+        language: system
+        types: [python]
       - id: flake8
-
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v2.3.1
-    hooks:
+        name: flake8
+        entry: flake8
+        language: system
+        types: [python]
       - id: pylint
-
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.720
-    hooks:
+        name: pylint
+        entry: pylint  --rcfile=".pylintrc"
+        language: system
+        types: [python]
       - id: mypy
-        args: [--no-strict-optional, --ignore-missing-imports]
+        name: mypy
+        entry: mypy
+        language: system
+        types: [python]
+      - id: pycodestyle
+        name: pycodestyle
+        entry: pycodestyle --max-line-length=90
+        language: system
+        types: [python]
