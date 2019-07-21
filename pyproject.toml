@@ -1,2 +1,18 @@
-[build-system]
-requires = ["setuptools", "wheel"]
+[tool.poetry]
+name = "opt_out.public_api"
+version = "0.1.0"
+description = "Public API for opt-out website, browser extensions and 3rd party tools"
+authors = ["Bojan Miletic <boyan.miletic@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "opt_out", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+django = "^2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"
+
