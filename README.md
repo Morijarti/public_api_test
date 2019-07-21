@@ -11,6 +11,11 @@ Description
 
 A longer description of your project goes here...
 
+Development
+===========
+
+Run `poetry install`
+and after that `pre-commit install`
 
 Note
 ====
